@@ -30,7 +30,7 @@ INNEHÅLL
 body {
     margin: 0;
     background-color: #fffaf3;
-    color: #222222;
+    color: #222222; /* Kontrast mot body background: 15.32 AAA. Kontrast mot article background: 15.91 AAA. Kontrast mot hero background: 12.65 AAA */
     font-family:
         system-ui,
         Segoe UI,
@@ -50,7 +50,7 @@ footer {
 }
 header,
 footer {
-    color: #ffffff;
+    color: #ffffff; /* Kontast mot header background 10.09 AAA. Kontast mot footer background 16.42 AAA */
     padding: 16px 24px;
 }
 
@@ -61,11 +61,11 @@ nav ul {
 }
 
 nav a {
-    color: #ffffff;
+    color: #ffffff; /* Kontast mot header background 10.09 AAA. */
     text-decoration: none;
 }
 nav a:hover {
-    color: #ffffff;
+    color: #ffffff; /* Kontast mot header background 10.09 AAA. */
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
@@ -126,7 +126,7 @@ h3 {
 main h1,
 main h2,
 main h3 {
-    color: #3b2418;
+    color: #3b2418; /* Kontrast mot article background: 14.47 AAA */
 }
 
 p {
@@ -135,11 +135,11 @@ p {
 
 /***** 4. LÄNKAR *****/
 a {
-    color: #8c1010;
+    color: #8c1010; /* Kontrast mot article background: 9.56 AAA.  Kontrast mot body background: 9.20 AAA. Kontrast mot hero background: 7.60 AAA */
     text-underline-offset: 3px;
 }
 a:hover {
-    color: #5e0a0a;
+    color: #5e0a0a; /* Kontrast mot article background: 13.78 AAA.  Kontrast mot body background: 13.27 AAA. Kontrast mot hero background: 10.96 AAA */
     text-decoration-thickness: 2px;
 }
 a:focus-visible {
@@ -195,10 +195,10 @@ footer address p {
     font-style: normal;
 }
 footer a {
-    color: #ffffff;
+    color: #ffffff; /* Kontrast mot footer background: 16.42 AAA */
 }
 footer a:hover {
-    color: #ffffff;
+    color: #ffffff; /* Kontrast mot footer background: 16.42 AAA */
 }
 
 /***** 7. EGNA KLASSER och ID:s *****/
@@ -221,7 +221,7 @@ footer a:hover {
 .knapp,
 input[type='submit'] {
     display: inline-block;
-    color: #ffffff;
+    color: #ffffff; /* Kontrast mot background: 9.56 AAA */
     background-color: #8c1010;
     padding: 12px 20px;
     margin-top: 1rem;
@@ -232,7 +232,7 @@ input[type='submit'] {
 }
 .knapp:hover,
 input[type='submit']:hover {
-    color: #ffffff;
+    color: #ffffff; /* Kontrast mot hover background: 12.11 AAA */
     background-color: #6f0c0c;
 }
 .knapp:active,
@@ -245,10 +245,10 @@ input[type='submit']:active {
     margin-top: 1rem;
 }
 .pris {
-    color: #8c1010;
+    color: #8c1010; /* Kontrast mot article background: 9.56 AAA */
 }
 .hjalp-text {
-    color: #666666;
+    color: #666666; /* Kontrast mot body background: 5.53 AA */
     font-size: 0.875rem;
     margin-top: 0.25rem;
 }
