@@ -89,72 +89,78 @@
 
                 <fieldset>
                     <legend>Kostönskemål (valfritt)</legend>
-                    <label for="vegetarisk">Vegetarisk</label>
-                    <input
-                        type="checkbox"
-                        id="vegetarisk"
-                        name="kostonskemal"
-                        value="vegetarisk"
-                    />
-
-                    <label for="vegansk">Vegansk</label>
-                    <input
-                        type="checkbox"
-                        id="vegansk"
-                        name="kostonskemal"
-                        value="vegansk"
-                    />
-
-                    <label for="glutenfri">Glutenfri</label>
-                    <input
-                        type="checkbox"
-                        id="glutenfri"
-                        name="kostonskemal"
-                        value="glutenfri"
-                    />
+                    <div class="checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="vegetarisk"
+                            name="kostonskemal"
+                            value="vegetarisk"
+                        />
+                        <label for="vegetarisk">Vegetarisk</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="vegansk"
+                            name="kostonskemal"
+                            value="vegansk"
+                        />
+                        <label for="vegansk">Vegansk</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="glutenfri"
+                            name="kostonskemal"
+                            value="glutenfri"
+                        />
+                        <label for="glutenfri">Glutenfri</label>
+                    </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>Hur vill du få bekräftelsen? *</legend>
-                    <label for="bekraftelse-epost">E-post</label>
-                    <input
-                        type="radio"
-                        id="bekraftelse-epost"
-                        name="bekraftelse"
-                        value="epost"
-                        required
-                    />
-
-                    <label for="bekraftelse-sms">SMS</label>
-                    <input
-                        type="radio"
-                        id="bekraftelse-sms"
-                        name="bekraftelse"
-                        value="sms"
-                        required
-                    />
+                    <div class="checkbox-group">
+                        <input
+                            type="radio"
+                            id="bekraftelse-epost"
+                            name="bekraftelse"
+                            value="epost"
+                            required
+                        />
+                        <label for="bekraftelse-epost">E-post</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input
+                            type="radio"
+                            id="bekraftelse-sms"
+                            name="bekraftelse"
+                            value="sms"
+                            required
+                        />
+                        <label for="bekraftelse-sms">SMS</label>
+                    </div>
                 </fieldset>
 
-                <label for="onskemal"
-                    >Övriga önskemål (valfritt)
-                    <textarea
-                        name="onskemal"
-                        id="onskemal"
-                        placeholder="Skriv här om du har några övriga önskemål"
-                        rows="5"
-                    ></textarea>
-                </label>
-
-                <label for="samtycke">
+                <label for="onskemal">Övriga önskemål (valfritt) </label>
+                <textarea
+                    name="onskemal"
+                    id="onskemal"
+                    placeholder="Skriv här om du har några övriga önskemål"
+                    rows="5"
+                ></textarea>
+                <div class="checkbox-group samtycke">
                     <input
                         type="checkbox"
                         id="samtycke"
                         name="samtycke"
                         required
                     />
-                    Jag godkänner att Kafé Kardemumma sparar mina uppgifter för
-                    bokningen. *
-                </label>
+                    <label for="samtycke">
+                        Jag godkänner att Kafé Kardemumma sparar mina uppgifter
+                        för bokningen. *
+                    </label>
+                </div>
                 <input type="submit" value="Skicka bokning" />
             </form>
         </main>

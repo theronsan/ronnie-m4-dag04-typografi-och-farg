@@ -53,14 +53,21 @@ footer {
     color: #ffffff;
     padding: 16px 24px;
 }
-header a,
-footer a {
-    color: #ffffff;
-}
+
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 img {
@@ -88,16 +95,15 @@ article {
     padding: 16px;
     margin-bottom: 16px;
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
-
-    img {
-        border-radius: 4px;
-    }
 }
 /* Boxmodellen för en article, från vänster till höger (horisontellt):
 
 margin 0 | border 1 | padding 16 | content 1034 | padding 16 | border 1 | margin 0
 
 */
+article img {
+    border-radius: 4px;
+}
 
 /***** 3. TYPOGRAFI *****/
 h1,
@@ -117,12 +123,10 @@ h2,
 h3 {
     margin-top: 1rem;
 }
-main {
-    h1,
-    h2,
-    h3 {
-        color: #3b2418;
-    }
+main h1,
+main h2,
+main h3 {
+    color: #3b2418;
 }
 
 p {
@@ -158,19 +162,43 @@ textarea {
     border-radius: 6px;
     font: inherit;
 }
+label {
+    font-weight: 700;
+    display: block;
+    margin-top: 1rem;
+}
+fieldset {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 2px solid #8a7a6a;
+    border-radius: 8px;
+    max-width: 28rem;
+}
+fieldset legend {
+    font-weight: 700;
+    padding: 0 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.checkbox-group label {
+    margin-top: 0;
+}
 
 /***** 6. SIDFOT *****/
-footer address {
-    p {
-        margin-top: 0;
-        font-style: normal;
-    }
-    .company-name {
-        font-weight: 700;
-    }
-    .copyright {
-        margin-top: 1rem;
-    }
+footer address p {
+    margin-top: 0;
+    font-style: normal;
+}
+footer a {
+    color: #ffffff;
+}
+footer a:hover {
+    color: #ffffff;
 }
 
 /***** 7. EGNA KLASSER och ID:s *****/
@@ -190,7 +218,8 @@ footer address {
     }
 }
 
-.knapp {
+.knapp,
+input[type='submit'] {
     display: inline-block;
     color: #ffffff;
     background-color: #8c1010;
@@ -198,12 +227,16 @@ footer address {
     margin-top: 1rem;
     border-radius: 6px;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
-.knapp:hover {
+.knapp:hover,
+input[type='submit']:hover {
     color: #ffffff;
     background-color: #6f0c0c;
 }
-.knapp:active {
+.knapp:active,
+input[type='submit']:active {
     transform: scale(0.97);
 }
 /* Jag lägger inte in en :focus-visible på knapp-klassen eftersom den redan får den stilen från a-elementet */
@@ -213,4 +246,18 @@ footer address {
 }
 .pris {
     color: #8c1010;
+}
+.hjalp-text {
+    color: #666666;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+.samtycke {
+    margin-top: 1rem;
+}
+.company-name {
+    font-weight: 700;
+}
+.copyright {
+    margin-top: 1rem;
 }
