@@ -23,8 +23,16 @@ body {
     margin: 0;
     background-color: #fffaf3;
     color: #222222;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
+    font-family:
+        system-ui,
+        Segoe UI,
+        Roboto,
+        sans-serif;
+    /* rem är bättre än px eftersom rem anger storleken i förhållande till rot-elementets
+    storlek och är inte ett fast värde som px är. Det gör att teckenstorleken kan skalas upp
+    om en användare ändrar i sin webbläsare att teckenstorleken ska öka/bli större. Det ger en
+    bättre tillgänglighet. */
+    line-height: 1.6;
 }
 header {
     background-color: #5b3a29;
@@ -47,11 +55,46 @@ nav ul {
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    max-width: 1100px;
+    padding: 24px;
+    /* Sätter top/bottom margin till 0 och vänster/höger margin till auto.
+    auto gör att elementet får sitt värde automatiskt (lika mycket till vänster som till höger) baserat på förälderns bredd.
+    Effekten blir att elementet centreras horisontellt. */
+    margin: 0 auto;
+}
+
 /* Boxmodellen för en article, från vänster till höger (horisontellt):
 
 margin 0 | border 1 | padding 16 | content 1034 | padding 16 | border 1 | margin 0
 
 */
+
+#hero {
+    background-color: #f3e3cf;
+    padding: 2rem;
+    border-radius: 8px;
+    font-family: system-ui;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+}
+
+section:not(:first-child) {
+    margin-top: 2rem;
+}
+
 article {
     background-color: #ffffff;
     border: 1px solid #e3d5c3;
@@ -64,55 +107,48 @@ article {
         border-radius: 4px;
     }
 }
-img {
-    max-width: 100%;
-    height: auto;
-}
-main {
-    max-width: 1100px;
-    padding: 24px;
-    /* Sätter top/bottom margin till 0 och vänster/höger margin till auto.
-    auto gör att elementet får sitt värde automatiskt (lika mycket till vänster som till höger) baserat på förälderns bredd.
-    Effekten blir att elementet centreras horisontellt. */
-    margin: 0 auto;
-}
+
 .knapp {
     display: inline-block;
-    background-color: #8c1010;
     color: #ffffff;
+    background-color: #8c1010;
     padding: 12px 20px;
     margin-top: 1rem;
     border-radius: 6px;
     text-decoration: none;
 }
 .knapp:hover {
+    color: #ffffff;
     background-color: #6f0c0c;
 }
-
-#hero {
-    background-color: #f3e3cf;
-    padding: 2rem;
-    border-radius: 8px;
-
-    h2 {
-        margin-top: 0;
-    }
+.knapp:active {
+    transform: scale(0.97);
 }
+/* Jag lägger inte in en :focus-visible på knapp-klassen eftersom den redan får den stilen från a-elementet */
 
-section:not(:first-child) {
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    line-height: 1.2;
+}
+h1,
+h2 {
+    font-size: 1.75rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h2,
+h3 {
     margin-top: 1rem;
 }
-
 main {
     h1,
     h2,
     h3 {
         color: #3b2418;
     }
-}
-h2,
-h3 {
-    margin-top: 1rem;
 }
 
 p {
@@ -121,6 +157,15 @@ p {
 
 a {
     color: #8c1010;
+    text-underline-offset: 3px;
+}
+a:hover {
+    color: #5e0a0a;
+    text-decoration-thickness: 2px;
+}
+a:focus-visible {
+    outline: 3px solid #1a73e8;
+    outline-offset: 2px;
 }
 
 .meny-lista {
@@ -130,6 +175,20 @@ a {
     color: #8c1010;
 }
 
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='date'],
+input[type='number'],
+select,
+textarea {
+    width: 100%;
+    max-width: 28rem;
+    padding: 10px 12px;
+    border: 2px solid #8a7a6a;
+    border-radius: 6px;
+    font: inherit;
+}
 footer address {
     p {
         margin-top: 0;
