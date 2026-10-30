@@ -1,12 +1,18 @@
-/* Dag 3: grunder och boxmodell. Följ README.md och design.md.
-   TODO 1: box-sizing (överst)
-   TODO 2: body
-   TODO 3: header och footer
-   TODO 4: nav ul (ta bort punkter)
-   TODO 5: article (kort)
-   TODO 6: main (centrerat, max-bredd)
-   TODO 7: .knapp
+/*
+
+INNEHÅLL
+
+1. Grundläggande inställningar
+2. Semantiska element
+3. Typografi
+4. Länkar
+5. Formulär
+6. Sidfot
+7. Egna klasser och ID's
+
 */
+
+/***** 1. GRUNDLÄGGANDE INSTÄLLNINGAR *****/
 
 /* Padding och border inkluderas i elementets totala storlek */
 *,
@@ -19,6 +25,8 @@
     margin: 0;
     padding: 0;
 }
+
+/***** 2. SEMANTISKA ELEMENT *****/
 body {
     margin: 0;
     background-color: #fffaf3;
@@ -69,28 +77,6 @@ main {
     margin: 0 auto;
 }
 
-/* Boxmodellen för en article, från vänster till höger (horisontellt):
-
-margin 0 | border 1 | padding 16 | content 1034 | padding 16 | border 1 | margin 0
-
-*/
-
-#hero {
-    background-color: #f3e3cf;
-    padding: 2rem;
-    border-radius: 8px;
-    font-family: system-ui;
-
-    h2 {
-        margin-top: 0;
-    }
-
-    p {
-        font-size: 1.125rem;
-        line-height: 1.6;
-    }
-}
-
 section:not(:first-child) {
     margin-top: 2rem;
 }
@@ -107,25 +93,13 @@ article {
         border-radius: 4px;
     }
 }
+/* Boxmodellen för en article, från vänster till höger (horisontellt):
 
-.knapp {
-    display: inline-block;
-    color: #ffffff;
-    background-color: #8c1010;
-    padding: 12px 20px;
-    margin-top: 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-}
-.knapp:hover {
-    color: #ffffff;
-    background-color: #6f0c0c;
-}
-.knapp:active {
-    transform: scale(0.97);
-}
-/* Jag lägger inte in en :focus-visible på knapp-klassen eftersom den redan får den stilen från a-elementet */
+margin 0 | border 1 | padding 16 | content 1034 | padding 16 | border 1 | margin 0
 
+*/
+
+/***** 3. TYPOGRAFI *****/
 h1,
 h2,
 h3 {
@@ -155,6 +129,7 @@ p {
     margin-top: 1rem;
 }
 
+/***** 4. LÄNKAR *****/
 a {
     color: #8c1010;
     text-underline-offset: 3px;
@@ -168,13 +143,7 @@ a:focus-visible {
     outline-offset: 2px;
 }
 
-.meny-lista {
-    margin-top: 1rem;
-}
-.pris {
-    color: #8c1010;
-}
-
+/***** 5. FORMULÄR *****/
 input[type='text'],
 input[type='email'],
 input[type='tel'],
@@ -189,6 +158,8 @@ textarea {
     border-radius: 6px;
     font: inherit;
 }
+
+/***** 6. SIDFOT *****/
 footer address {
     p {
         margin-top: 0;
@@ -200,4 +171,46 @@ footer address {
     .copyright {
         margin-top: 1rem;
     }
+}
+
+/***** 7. EGNA KLASSER och ID:s *****/
+#hero {
+    background-color: #f3e3cf;
+    padding: 2rem;
+    border-radius: 8px;
+    font-family: system-ui;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+}
+
+.knapp {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #8c1010;
+    padding: 12px 20px;
+    margin-top: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.knapp:hover {
+    color: #ffffff;
+    background-color: #6f0c0c;
+}
+.knapp:active {
+    transform: scale(0.97);
+}
+/* Jag lägger inte in en :focus-visible på knapp-klassen eftersom den redan får den stilen från a-elementet */
+
+.meny-lista {
+    margin-top: 1rem;
+}
+.pris {
+    color: #8c1010;
 }
